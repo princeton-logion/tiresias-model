@@ -4,6 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tiresias-model"
+license = {text = "MIT"}
 version = "1.0.0"
 description = "TIRESIAS: an encoder for classical philology"
 readme = "README.md"
@@ -22,5 +23,9 @@ train = [
     "click",
 ]
 
-[tool.setuptools]
-packages = ["tiresias"]
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+GitHub = "https://github.com/princeton-logion/tiresias-model"
+HuggingFace = https://huggingface.co/princeton-logion

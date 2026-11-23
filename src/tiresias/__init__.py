@@ -7,8 +7,8 @@ Tiresias: a character-level, span-masked, encoder-only model
 - registers Tiresias with the transformers Auto* factories on import so that a saved model can be reloaded with HF's ``AutoModelForMaskedLM.from_pretrained``
 """
 
-from .configuration_tiresias import TiresiasConfig
-from .modeling_tiresias import (
+from .modeling.configuration_tiresias import TiresiasConfig
+from .modeling.modeling_tiresias import (
     CharEncoderLayer,
     CharHashEmbedding,
     TiresiasForMaskedLM,
@@ -17,14 +17,14 @@ from .modeling_tiresias import (
     TiresiasPreTrainedModel,
     create_local_attention_mask,
 )
-from .encoder import DeepEncoder, DeepEncoderLayer, DeepFeedForward, GeGLU
-from .disentangled_attn import (
+from .modeling.encoder import DeepEncoder, DeepEncoderLayer, DeepFeedForward, GeGLU
+from .modeling.disentangled_attn import (
     DisentangledSelfAttention,
     build_relative_position,
     make_log_bucket_position,
 )
-from .dense_gbst import DenseGBST
-from .data_collator_mlm import (
+from .modeling.dense_gbst import DenseGBST
+from .data.data_collator_mlm import (
     DataCollatorForMaskedLM,
     DatasetForMaskedLM,
     MaskingScheduleType,
