@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiresias-model"
+version = "1.0.0"
+description = "TIRESIAS: an encoder for classical philology"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.0",
+    "transformers>=4.41",
+    "einops>=0.6",
+    "numpy",
+]
+
+[project.optional-dependencies]
+train = [
+    "datasets",
+    "matplotlib",
+    "click",
+]
+
+[tool.setuptools]
+packages = ["tiresias"]

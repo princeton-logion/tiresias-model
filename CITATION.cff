@@ -1,0 +1,14 @@
+# YAML 1.2
+# Metadata for citation of this software according to the CFF format (https://citation-file-format.github.io/)
+cff-version: 1.0.0
+message: If you use this software, please cite it using these metadata.
+title: tiresias model
+authors:
+- given-names: Jacob
+  family-names: Murel
+  affiliation: Research Computing, Princeton University
+  orcid: https://orcid.org/0000-0002-0959-5448
+version: '1.0'
+date-released: 2025-11-23
+repository-code: https://github.com/princeton-logion/tiresias-model
+license: MIT
